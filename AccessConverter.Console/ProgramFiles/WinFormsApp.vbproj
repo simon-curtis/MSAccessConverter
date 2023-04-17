@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <RootNamespace>{{RootNamespace}}</RootNamespace>
+        <StartupObject>Sub Main</StartupObject>
+        <UseWindowsForms>true</UseWindowsForms>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Import Include="System.Data"/>
+        <Import Include="System.Drawing"/>
+        <Import Include="System.Windows.Forms"/>
+        <Import Include="Access = Microsoft.Office.Interop.Access"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="ADODB" Version="7.10.3077" />
+        <PackageReference Include="Microsoft.Office.Interop.Access" Version="15.0.4420.1018" />
+        <PackageReference Include="Microsoft.Office.Interop.Access.Dao" Version="15.0.4420.1018" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Content Include="Resources\**\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+
+</Project>

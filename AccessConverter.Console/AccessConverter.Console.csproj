@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="ADODB" Version="7.10.3077" />
+      <PackageReference Include="Magick.NET-Q16-x64" Version="13.0.1" />
+      <PackageReference Include="Microsoft.Office.Interop.Access" Version="15.0.4420.1018" />
+      <PackageReference Include="Microsoft.Office.Interop.Access.Dao" Version="15.0.4420.1018" />
+      <PackageReference Include="OpenMcdf" Version="2.2.1.12" />
+      <PackageReference Include="System.Data.OleDb" Version="7.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Microsoft.Vbe.Interop">
+        <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Vbe.Interop\15.0.0.0__71e9bce111e9429c\Microsoft.Vbe.Interop.dll</HintPath>
+      </Reference>
+      <Reference Include="Microsoft.Vbe.Interop.Forms">
+        <HintPath>C:\Windows\assembly\GAC_MSIL\Microsoft.Vbe.Interop.Forms\11.0.0.0__71e9bce111e9429c\Microsoft.Vbe.Interop.Forms.dll</HintPath>
+      </Reference>
+      <Reference Include="office">
+        <HintPath>C:\Windows\assembly\GAC_MSIL\office\15.0.0.0__71e9bce111e9429c\OFFICE.DLL</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Include="Templates\*">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </None>
+      <Content Include="ProgramFiles\**\*">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
+
+</Project>
